@@ -11,8 +11,8 @@ Usage:
 Options:
   -h --help                              Show this screen.
   --version                              Show version.
-  -s SERVER --server=SERVER              Set Server [default: 192.168.224.76]
-  -p PORT --port=PORT                    Set Port [default: 8000]
+  -s SERVER --server=SERVER              Set Server [default: opscomm-server-core-mluich.c9users.io]
+  -p PORT --port=PORT                    Set Port [default: 8080]
   -F --FULL                              Use Full detail listing
   -c COLUMN --columns=COLUMNS            Set Columns [default: 25]
   -L LEVEL --logging=level               Set Debug Level critical, error, warning, info, debug  [default: error]
