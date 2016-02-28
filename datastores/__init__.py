@@ -1,2 +1,3 @@
 # __init__.py
-from .* import *
+#TODO wildcard import?
+#from .* import *

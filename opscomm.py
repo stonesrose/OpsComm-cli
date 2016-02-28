@@ -28,8 +28,8 @@ from inspect import getmembers, isclass, ismodule
 from docopt import docopt
 import logging
 import pkg_resources  # part of setuptools
-version = pkg_resources.require("opscomm")[0].version
-
+#version = pkg_resources.require("opscomm")[0].version
+version = "0.0.20160228"
 logger = logging.getLogger()
 handler = logging.StreamHandler()
 formatter = logging.Formatter(
