@@ -73,7 +73,7 @@ def main():
               try:
                 func = getattr(instance, options['ACTION'] )
               except AttributeError:
-                print 'function not found "%s"  ' % (name2,)
+                print 'function not found "{0!s}"  '.format(name2)
               else:
                 func()
 
