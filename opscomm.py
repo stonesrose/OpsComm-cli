@@ -72,6 +72,7 @@ def main():
         logging.debug( '  %s = %s' % (name, value))
         options[name]=value
 
+    logging.debug("Getting docopt")
     #And Commandline options overwrite
     docOptions = docopt(__doc__, version=version)
     for key in docOptions.keys():
@@ -80,7 +81,11 @@ def main():
         if cleanKey in options: continue
         options[cleanKey] = docOptions[key]
 
+    logging.debug("Set Logging level")
     #Set logging level:
+    if 'logging' in options:
+      logging.debug("options exists: %s" % options['logging'])
+      
     if options['logging'] == "critical": logger.setLevel(logging.CRITICAL)
     elif options['logging'] == "error": logger.setLevel(logging.ERROR)
     elif options['logging'] == "warning": logger.setLevel(logging.WARNING)
@@ -90,7 +95,7 @@ def main():
 
     logging.debug("options: ")
     logging.debug(options)
-    print (options['logging'])
+    logging.debug(options['logging'])
 
     for name, data in getmembers(datastores, isclass):
       if name == '__builtins__': continue

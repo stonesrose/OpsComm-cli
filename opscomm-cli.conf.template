@@ -1,0 +1,6 @@
+[server]
+server=
+port=
+
+[other]
+stuff=things
